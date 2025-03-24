@@ -1,21 +1,28 @@
 import { defineNuxtModule, addServerPlugin, addPlugin, addImportsDir, createResolver, addComponent } from '@nuxt/kit'
 
 // Module options TypeScript interface definition
-// export interface ModuleOptions {}
+export interface ModuleOptions {
+  optimizelyKey: string
+  logLevel: string
+}
 
-export default defineNuxtModule({
+export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxt-optimizely',
     configKey: 'nuxtOptimizely',
   },
   // Default configuration options of the Nuxt module
   defaults: {
-    optimizelyKey: '',
+    optimizelyKey: process.env.OPTIMIZELY_SDK_KEY || '',
+    logLevel: 'DEBUG',
   },
+
   setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
-    nuxt.options.runtimeConfig.myModule = {
-      accessKey: options.optimizelyKey || process.env.OPTIMIZELY_SDK_KEY || '',
+
+    nuxt.options.runtimeConfig.public.myModule = {
+      accessKey: options.optimizelyKey,
+      logLevel: options.logLevel,
     }
 
     addPlugin(resolver.resolve('./runtime/plugins/optimizely.client.ts'))
@@ -27,5 +34,12 @@ export default defineNuxtModule({
     })
 
     addImportsDir(resolver.resolve('./runtime/composables'))
+
+    nuxt.hook('nitro:config', (nitroConfig) => {
+      if (nitroConfig.runtimeConfig?.public) {
+        // merge runtime options into nitro
+        nitroConfig.runtimeConfig.public = { ...nitroConfig.runtimeConfig.public, options }
+      }
+    })
   },
 })

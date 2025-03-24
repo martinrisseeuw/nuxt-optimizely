@@ -41,6 +41,7 @@
     "@types/node": "latest",
     "changelogen": "^0.6.1",
     "eslint": "^9.22.0",
+    "nuxi": "^3.23.1",
     "nuxt": "^3.16.1",
     "typescript": "~5.8.2",
     "vitest": "^3.0.9",
