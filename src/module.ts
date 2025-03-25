@@ -20,7 +20,7 @@ export default defineNuxtModule<ModuleOptions>({
   setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    nuxt.options.runtimeConfig.public.myModule = {
+    nuxt.options.runtimeConfig.public.optimizely = {
       accessKey: options.optimizelyKey,
       logLevel: options.logLevel,
     }

@@ -7,8 +7,8 @@ export default defineNitroPlugin((nitroApp) => {
 
   try {
     client = createInstance({
-      sdkKey: useRuntimeConfig().public.myModule.accessKey,
-      logLevel: useRuntimeConfig().public.myModule.logLevel || enums.LOG_LEVEL.INFO,
+      sdkKey: useRuntimeConfig().public.optimizely.accessKey,
+      logLevel: useRuntimeConfig().public.optimizely.logLevel || enums.LOG_LEVEL.INFO,
     })
   }
   catch (error) {
