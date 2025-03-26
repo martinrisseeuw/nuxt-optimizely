@@ -25,12 +25,12 @@ export default defineNuxtModule<ModuleOptions>({
       logLevel: options.logLevel,
     }
 
-    addPlugin(resolver.resolve('./runtime/plugins/optimizely.client.ts'))
-    addPlugin(resolver.resolve('./runtime/plugins/optimizely.server.ts'))
-    addServerPlugin(resolver.resolve('./runtime/server/plugins/optimizely.ts'))
+    addPlugin(resolver.resolve('./runtime/plugins/optimizely.client'))
+    addPlugin(resolver.resolve('./runtime/plugins/optimizely.server'))
+    addServerPlugin(resolver.resolve('./runtime/server/plugins/optimizely'))
     addComponent({
       name: 'OptimizelyFeatureTest',
-      filePath: resolver.resolve('./runtime/components/OptimizelyFeatureTest.vue'),
+      filePath: resolver.resolve('./runtime/components/OptimizelyFeatureTest'),
     })
 
     addImportsDir(resolver.resolve('./runtime/composables'))
