@@ -2,7 +2,7 @@ import type { UserAttributes } from '@optimizely/optimizely-sdk'
 import { getVariation } from '../utils/get-variation'
 import { useNuxtApp, useRoute } from '#app'
 
-export default function ({
+export function useOptimizely({
   experimentKey,
   userAttributes,
   featureKey,

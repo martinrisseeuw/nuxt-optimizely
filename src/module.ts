@@ -1,4 +1,4 @@
-import { defineNuxtModule, addServerPlugin, addPlugin, addImportsDir, createResolver, addComponent } from '@nuxt/kit'
+import { defineNuxtModule, addServerPlugin, addPlugin, addImports, createResolver, addComponent } from '@nuxt/kit'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
@@ -33,7 +33,16 @@ export default defineNuxtModule<ModuleOptions>({
       filePath: resolver.resolve('./runtime/components/OptimizelyFeatureTest'),
     })
 
-    addImportsDir(resolver.resolve('./runtime/composables'))
+    addImports({
+      name: 'useOptimizely', // name of the composable to be used
+      as: 'useOptimizely',
+      from: resolver.resolve('runtime/composables/useOptimizely'), // path of composable
+    })
+    addImports({
+      name: 'useUserId', // name of the composable to be used
+      as: 'useUserId',
+      from: resolver.resolve('runtime/composables/useUserId'), // path of composable
+    })
 
     nuxt.hook('nitro:config', (nitroConfig) => {
       if (nitroConfig.runtimeConfig?.public) {

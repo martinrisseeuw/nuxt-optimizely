@@ -1,4 +1,6 @@
-export default function () {
+import { useCookie } from '#app'
+
+export function useUserId() {
   /**
    * Gets or creates a unique user ID to be used for Optimizely experiments.
    * @see: https://docs.developers.optimizely.com/full-stack-experimentation/docs/handle-user-ids
