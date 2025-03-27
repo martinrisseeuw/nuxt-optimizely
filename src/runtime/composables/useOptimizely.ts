@@ -1,5 +1,6 @@
 import type { UserAttributes } from '@optimizely/optimizely-sdk'
 import { getVariation } from '../utils/get-variation'
+import { useUserId } from './useUserId'
 import { useNuxtApp, useRoute } from '#app'
 
 export function useOptimizely({

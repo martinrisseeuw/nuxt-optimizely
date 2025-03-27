@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { UserAttributes } from '@optimizely/optimizely-sdk'
+import { useOptimizely } from '../composables/useOptimizely'
 
 const props = defineProps<{
   experimentKey: string
