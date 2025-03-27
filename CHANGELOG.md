@@ -1,4 +1,16 @@
 
+## v1.2.0
+
+[compare changes](https://github.com/martinrisseeuw/nuxt-optimizely/compare/v1.1.3...v1.2.0)
+
+### 🚀 Enhancements
+
+- Explicit imports for composables ([0204850](https://github.com/martinrisseeuw/nuxt-optimizely/commit/0204850))
+
+### ❤️ Contributors
+
+- Martinrisseeuw <hello@martinr.nl>
+
 ## v1.1.3
 
 [compare changes](https://github.com/martinrisseeuw/nuxt-optimizely/compare/v1.1.2...v1.1.3)
