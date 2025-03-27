@@ -1,4 +1,16 @@
 
+## v1.3.0
+
+[compare changes](https://github.com/martinrisseeuw/nuxt-optimizely/compare/v1.2.0...v1.3.0)
+
+### 🚀 Enhancements
+
+- Imports test ([ed0cbb0](https://github.com/martinrisseeuw/nuxt-optimizely/commit/ed0cbb0))
+
+### ❤️ Contributors
+
+- Martinrisseeuw <hello@martinr.nl>
+
 ## v1.2.0
 
 [compare changes](https://github.com/martinrisseeuw/nuxt-optimizely/compare/v1.1.3...v1.2.0)
