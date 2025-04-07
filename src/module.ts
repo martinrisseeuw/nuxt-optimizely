@@ -1,4 +1,4 @@
-import { defineNuxtModule, addServerPlugin, addPlugin, addImports, createResolver, addComponent } from '@nuxt/kit'
+import { defineNuxtModule, addTypeTemplate, addServerPlugin, addPlugin, addImports, createResolver, addComponent } from '@nuxt/kit'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
@@ -42,6 +42,15 @@ export default defineNuxtModule<ModuleOptions>({
       name: 'useUserId', // name of the composable to be used
       as: 'useUserId',
       from: resolver.resolve('runtime/composables/useUserId'), // path of composable
+    })
+
+    addTypeTemplate({
+      filename: 'types/optimizely.d.ts',
+      src: resolver.resolve('./runtime/types.d.ts'),
+    })
+
+    nuxt.hook('prepare:types', ({ references }) => {
+      references.push({ path: resolver.resolve(nuxt.options.buildDir, 'types/optimizely.d.ts') })
     })
 
     nuxt.hook('nitro:config', (nitroConfig) => {
