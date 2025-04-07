@@ -1,4 +1,17 @@
 
+## v1.4.0
+
+[compare changes](https://github.com/martinrisseeuw/nuxt-optimizely/compare/v1.3.0...v1.4.0)
+
+### 🚀 Enhancements
+
+- Add beta release script ([39e8de3](https://github.com/martinrisseeuw/nuxt-optimizely/commit/39e8de3))
+- Add disable query & types ([4cad747](https://github.com/martinrisseeuw/nuxt-optimizely/commit/4cad747))
+
+### ❤️ Contributors
+
+- Martinrisseeuw <hello@martinr.nl>
+
 ## v1.3.0
 
 [compare changes](https://github.com/martinrisseeuw/nuxt-optimizely/compare/v1.2.0...v1.3.0)
