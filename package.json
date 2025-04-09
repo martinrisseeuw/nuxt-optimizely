@@ -1,6 +1,6 @@
 {
   "name": "nuxt-optimizely",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Nuxt Optimizely module",
   "repository": "martinrisseeuw/nuxt-optimizely",
   "license": "MIT",

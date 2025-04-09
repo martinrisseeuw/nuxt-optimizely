@@ -1,4 +1,8 @@
 
+## v1.4.1
+
+[compare changes](https://github.com/martinrisseeuw/nuxt-optimizely/compare/v1.4.0...v1.4.1)
+
 ## v1.4.0
 
 [compare changes](https://github.com/martinrisseeuw/nuxt-optimizely/compare/v1.3.0...v1.4.0)
